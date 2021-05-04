@@ -1,0 +1,202 @@
+@font-face {
+    font-family: "cairoFont";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+    font-family: "cairoFont", Arial, sans-serif;
+    background-color: #fafafa;
+}
+a {
+    color:#000;
+    text-decoration: none !important;
+}
+/*تغيير الألوان الإفتراضية لجميع الأزرار في الموقع*/
+button {
+    background-color: transparent !important;
+    color: #bf40bf !important;
+    border-color: #bf40bf !important;
+}
+/*تغيير الألوان الإفتراضية لجميع الأزرار في الموقع عند مرور مؤشر الفأرة على الزر*/
+button:hover {
+    color: #fff !important;
+    background-color: #bf40bf !important;
+}
+/*flex يجب علينا وضع هذه الخاصية للابن "جسم البطاقة" لأن البطاقة لديها قيمة عرض*/
+.card-body {
+    min-width: 0;
+}
+.card .card-horizontal .card-body p {
+    white-space: nowrap;/*منع النزول لسطر جديد والإكتفاء بسطر واحد*/
+    overflow: hidden;/*إخفاء جميع المعلومات بعد السطر الأول*/
+    text-overflow: ellipsis;/*إضافة النقط الثلاث في نهاية الجملة*/
+}
+/*تغيير لون القائمة العلوية*/
+#top-menu .bg-light {
+    background-color: #fff !important;
+}
+/*وضع دائرة حول أيقونة شعار الموقع*/
+#top-menu .video-icon {
+    background-color: #bf40bf;
+    color: #fff;
+    border-radius: 15%;
+}
+/*تغيير لون الروابط التشعبية عند مرور مؤشر الفأرة عليها أو عند الضغط عليها*/
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active>.nav-link {
+    color: #fff;
+    background-color: #bf40bf;
+}
+/*تغيير لون رابط تسجيل الدخول*/
+.navbar .login {
+    color: #bf40bf;
+}
+/*x تغيير ألوان إشارة*/
+.modal .modal-header .close:hover {
+    color: #bf40bf !important;
+    background-color: transparent !important;
+}
+/*إخفاء الظل الذي يظهر حول مربع البحث والأزرار عند الضغط عليه*/
+input.form-control:focus,
+button:focus {
+    box-shadow: none !important;
+}
+.card .card-icons {
+    position: relative;
+}
+/*تحديد موضع حاوية الوقت*/
+time {
+    position: absolute;
+    bottom: 10px;
+    left: 7px;
+    color: #fff;
+    background-color: #000;
+    padding: 0px 3px;
+}
+/*تحديد موضع أيقونة التشغيل*/
+.card .fa-play {
+    position: absolute;
+    top: 43%;
+    right: 45%;
+    color:#2c3131c7;
+    display: none;
+}
+.card:hover .fa-play {
+    display: inline;
+}
+.card:hover {
+    transform: translateY(-.9%);
+}
+.card {
+    transition: transform .5s;
+}
+.card .card-title {
+    height: 50px;
+    overflow: hidden;
+}
+#top-menu .fa-bars {
+    cursor: pointer;
+}
+/*تنسيق القائمة الجانبية*/
+.sidebar {
+    position: fixed;
+    z-index: 4;
+    right: -17rem;
+    transition: all 0.5s ease-in-out;
+    height: 100%; /*طول القائمة*/
+    background-color: #fff;
+    overflow: hidden; /*أخفي جميع العناصر التي تتخطى 100 */
+    padding-bottom: 60px;
+}
+/*إظهار شريط التمرير بشكل شاقولي*/
+.sidebar:hover {
+    overflow-y: scroll;
+}
+/*تغيير ألوان الأيقونات في القائمة الجانبية*/
+.sidebar .purple {
+    color:#bf40bf;
+}
+/*تغيير ألوان عناصر القائمة عند مرور مؤشر الفأرة على القائمة الجانبية*/
+.sidebar .list-group-item:hover {
+    color:#fff;
+    background-color: #bf40bf;
+}
+/*تغيير لون الأيقونات أيضًا عند مرور مؤشر الفأرة على القائمة الجانبية*/
+.sidebar .list-group-item:hover .purple {
+    color:#fff;
+}
+/*زيادة عرض عناصر القائمة الجانبية*/
+.sidebar .list-group-item {
+    width: 17rem;
+}
+/*إخفاء القائمة الجانبية عند أول تحميل للصفحة*/
+#wrap.toggled .sidebar {
+    right: 0rem;
+}
+/*تنسيق خلفية شريط التمرير*/
+.sidebar::-webkit-scrollbar {
+    background: rgb(230,230,230);
+    width: 8px;
+}
+/*تنسيق شريط التمرير*/
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgb(179,179,179);
+    width:8px;
+}
+/*الطبقة السوداء*/
+.layer {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: none;
+}
+.navbar .search-icon {
+    color: #bf40bf;
+    cursor: pointer;
+    padding: 15px 10px;
+    position: absolute;
+    top: 15px;
+    left: 132px;
+    display: none;
+}
+.navbar .search-icon:hover {
+    color: #fff;
+    background-color: #bf40bf;
+}
+/*تنسيق حقل الإدخال الذي سيظهر عند الضغط على أيقونة البحث*/
+.search-input {
+    position: fixed;
+    top: 72px;
+    border: none;
+    padding: 6px 23px;
+    height: 60px;
+    background-color: #efeeee;
+    display: none;
+    z-index: 1;
+}
+.search-input:focus {
+    background-color: #efeeee;
+}
+/*حذف المسافات من الحاوية لكي يمتد حقل البحث على كامل الشاشة*/
+.container-fluid {
+    padding: 0px;
+    overflow: hidden;
+}
+@media (max-width: 1115px) {
+    /*إخفاء حقل البحث الموجود في القائمة العلوية*/
+    .navbar .collapse .form-inline {
+        display: none;
+    }
+    /*إظهار أيقونة البحث*/
+    .navbar .search-icon {
+        display: inline;
+    }
+}
+/*إخفاء حقل البحث الذي يظهر في الشاشات المتوسطة والصغيرة*/
+@media (min-width: 1115px) {
+    .search-input {
+        display: none !important;
+    }
+}

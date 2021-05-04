@@ -1,0 +1,64 @@
+/*إلغاء تأثير الانتقال من البطاقة التي تحتوي على مقطع الفيديو*/
+.card:hover {
+    transform: translateY(0%);
+}
+/*لكي توازي الأيقونات الكتابة التي فوقها*/
+.watch-page .watch-icons {
+    position: absolute;/*وضع الأيقونات بأسفل الفيديو*/
+    bottom: 5px;
+    right: 20px;
+}
+/*عند مرور الفأرة على الأيقونات*/
+.watch-icons i:hover {
+    cursor: pointer;
+ }
+ /*إخفاء النص الذي سنظهره ونخفيه عند الضغط على الزر*/
+ .watch-page #more {
+    display: none;
+}
+/*إخفاء الظل الذي يظهر حول حقل الإدخال عند الضغط عليه*/
+.form-control:focus {
+    box-shadow: none;
+}
+/*إخفاء جميع الردود*/
+.card-inner {
+    display: none;
+}
+/*تغيير لون أزرار التعليق لتتناسب مع ألوان موقعنا*/
+.public-comment .card .btn {
+    background-color: #921192;
+    border-color: #921192;
+    color: #fff;
+}
+.public-comment .card .btn:hover {
+    background-color: #b915b9;
+}
+/*تغيير موضع حاوية الوقت*/
+time {
+    left: 24px !important;
+}
+/*تغيير موضع أيقونة التشغيل*/
+.watch-page .fa-play {
+    right: 46% !important;
+}
+/*تصغير حجم العنصر الذي يحتوي على مدة مقطع الفيديو وحجم أيقونة التشغيل*/
+@media (min-width: 992px) {
+    time {
+        font-size: 13px;
+    }
+    .fa-play {
+        font-size: 20px !important;
+    }
+}
+@media (max-width: 1062px) {
+    /*وضع هامش في أسفل الزر لكي يبتعد عن الأيقونات الموجودة أسفل منه*/
+    #myBtn {
+        margin-bottom: 60px !important;
+    }
+}
+@media (max-width: 570px) {
+    /*تصغير حجم الخط للحاوية التي تحتوي على مدة طرح التعليق*/
+    .reply-time {
+        font-size: 10px;
+    }
+}

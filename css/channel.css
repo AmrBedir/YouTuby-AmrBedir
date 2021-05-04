@@ -1,0 +1,37 @@
+/*تنسيق زر الاشتراك*/
+.channel-page .follow button {
+    color:#fff !important;
+    background-color: #bf40bf !important;
+}
+/*إلغاء تأثير الانتقال من البطاقة التي تحتوي على مقطع الفيديو*/
+.channel-page .video-section .card:hover {
+    transform: translateY(0%);
+}
+/*تصغير حجم حاوية الوقت*/
+time {
+    font-size: 13px;
+}
+/*تغيير موضع أيقونات التشغيل*/
+.channel-page .social-media {
+    bottom: 18px;
+    left: 20px;
+}
+/*تغيير موضع زر الاشتراك*/
+.channel-page .follow {
+    bottom: 18px;
+    right: 18px;
+}
+@media (max-width: 593px) {
+    /*تصغير حجم الخط والحاشية لأزرار القائمة لكي تأتي على صف واحد*/
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 13px;
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}
+@media (min-width: 594px) {
+    .navbar-light .navbar-nav .nav-link {
+        padding-right: 4px;
+        padding-left: 4px;
+    }
+}

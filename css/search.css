@@ -1,0 +1,47 @@
+/*تغيير مؤشر الفأرة عند المرور على أيقونة التصفية والكتابة التي بجانبها*/
+#search-filters-icon {
+    cursor: pointer;
+}
+/*إخفاء قائمة التصفية*/
+.search-header .filter-column {
+    display: none;
+}
+/*عند تحديد صندوق التأشير غير لونه*/
+input:checked+span {
+    color: #bf40bf;
+}
+/*تغييرموضع الحاوية التي تحتوي على مدة مقطع الفيديو*/
+time {
+    bottom: 7px;
+    left: 29px;
+}
+@media (max-width: 767px) {
+    /*لكي تمتد الصورة على كامل الحاوية التي تحتويها*/
+    .card .card-top-image {
+        width: 100%;
+    }
+    .card .card-horizontal time {
+        left: 10px;
+    }
+    .card .card-horizontal .fa-play {
+        right: 48%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    /*إظهار الحاوية التي تحتوي على اسم القناة وشعارها في سطرٍ لوحدها*/
+    .card .card-horizontal .card-body .channel-img {
+        display: block;
+        margin-top: 10px;
+    }
+    /*مسح الحاشية من يمين الصورة*/
+    .card .card-horizontal .card-body .channel-img>img {
+        margin-right: 0px !important;
+    }
+    /*إخفاء النص الذي يزيد عن سطرين*/
+    h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; 
+    }
+}
